@@ -1,0 +1,6 @@
+# Basic statistics of the numerical columns
+print(df.describe());
+# # Group by species and compute the mean of the numerical columns
+group_by_species = df.groupby("species").mean();
+print(group_by_species);
+
