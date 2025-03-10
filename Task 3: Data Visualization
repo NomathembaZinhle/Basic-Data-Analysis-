@@ -1,0 +1,30 @@
+pip install matplotlib seaborn
+import matplotlib.pyplot as plt
+
+# Example: Line chart of sepal_length over index (could be a time series for sales data)
+plt.plot(df.index, df['sepal_length'], label="Sepal Length");
+plt.title('Sepal Length over Time');
+plt.xlabel('Index');
+plt.ylabel('Sepal Length');
+plt.legend();
+plt.show();
+import seaborn as sns
+
+# Bar chart: Average petal length per species
+sns.barplot(x="species", y="petal_length", data=df);
+plt.title('Average Petal Length per Species');
+plt.xlabel('Species');
+plt.ylabel('Petal Length');
+plt.show();
+# Histogram of sepal length
+df['sepal_length'].hist(bins=20, edgecolor='black');
+plt.title('Distribution of Sepal Length');
+plt.xlabel('Sepal Length');
+plt.ylabel('Frequency');
+plt.show();
+# Scatter plot: Sepal Length vs Petal Length
+plt.scatter(df['sepal_length'], df['petal_length'], alpha=0.5);
+plt.title('Sepal Length vs Petal Length');
+plt.xlabel('Sepal Length');
+plt.ylabel('Petal Length');
+plt.show();
